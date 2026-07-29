@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Garcia07 Marcenaria</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+Garcia07 Marcenaria
+</div>
+
+<nav>
+<a href="#inicio">Início</a>
+<a href="#sobre">Sobre</a>
+<a href="#servicos">Serviços</a>
+<a href="#galeria">Galeria</a>
+<a href="#contato">Contato</a>
+</nav>
+
+</header>
+
+<section class="hero" id="inicio">
+
+<div class="overlay"></div>
+
+<div class="conteudo">
+
+<h1>Garcia07 Marcenaria</h1>
+
+<h2>Carpinteiro e Marceneiro</h2>
+
+<p>
+Portas • Janelas • Móveis Planejados • Escadas • Pergolados
+</p>
+
+<div class="botoes">
+
+<a href="https://wa.me/5575998009767" class="btn1" target="_blank">
+<i class="fa-solid fa-phone"></i>
+Solicitar Orçamento
+</a>
+
+<a href="https://wa.me/5575998009767" class="btn2" target="_blank">
+<i class="fab fa-whatsapp"></i>
+WhatsApp
+</a>
+
+</div>
+
+</div>
+
+</section><section class="vantagens animar">
+
+<h2>Por que escolher a Garcia07 Marcenaria?</h2>
+
+<div class="vantagens-grid">
+
+<div class="vantagem">
+<h3>✅ Qualidade Garantida</h3>
+<p>Materiais de qualidade e acabamento impecável em cada projeto.</p>
+</div>
+
+<div class="vantagem">
+<h3>🪵 Atendimento Personalizado</h3>
+<p>Cada cliente recebe um projeto pensado para sua necessidade.</p>
+</div>
+
+<div class="vantagem">
+<h3>⏰ Entrega no Prazo</h3>
+<p>Compromisso com o prazo combinado e transparência durante o serviço.</p>
+</div>
+
+<div class="vantagem">
+<h3>🤝 Confiança</h3>
+<p>Trabalhamos para conquistar clientes satisfeitos e recomendações.</p>
+</div>
+
+</div>
+
+</section>
+
+<section class="sobre animar" id="sobre"></section>
+
+<h2>Sobre a Garcia07 Marcenaria</h2>
+
+<p>
+A Garcia07 Marcenaria trabalha com fabricação e instalação de portas,
+janelas, móveis planejados, escadas, pergolados e diversos serviços em
+madeira, sempre entregando qualidade, acabamento impecável e compromisso
+com cada cliente.
+</p>
+
+</section>
+
+<section class="servicos animar" id="servicos"></section>
+
+<h2>Nossos Serviços</h2>
+
+<div class="cards">
+
+<div class="card">
+🚪
+<h3>Portas</h3>
+<p>Portas sob medida em madeira.</p>
+</div>
+
+<div class="card">
+🪟
+<h3>Janelas</h3>
+<p>Janelas com acabamento profissional.</p>
+</div>
+
+<div class="card">
+🪵
+<h3>Móveis Planejados</h3>
+<p>Projetos exclusivos para sua casa.</p>
+</div>
+
+<div class="card">
+🪜
+<h3>Escadas</h3>
+<p>Escadas modernas e resistentes.</p>
+</div>
+
+</div>
+
+</section>
+<section class="galeria animar" id="galeria"></section>
+
+<h2>Galeria de Trabalhos</h2>
+
+<div class="grade">
+
+<img src="galeria/foto1.jpg" alt="Trabalho 1">
+<img src="galeria/foto2.jpg" alt="Trabalho 2">
+<img src="galeria/foto3.jpg" alt="Trabalho 3">
+<img src="galeria/foto4.jpg" alt="Trabalho 4">
+<img src="galeria/foto5.jpg" alt="Trabalho 5">
+<img src="galeria/foto6.jpg" alt="Trabalho 6">
+<img src="galeria/foto7.jpg" alt="Trabalho 7">
+<img src="galeria/foto8.jpg" alt="Trabalho 8">
+<img src="galeria/foto9.jpg" alt="Trabalho 9">
+
+</div>
+
+</section>
+
+<section class="contato animar" id="contato">
+
+<h2>Entre em Contato</h2>
+
+<p>
+Solicite seu orçamento pelo WhatsApp.
+Será um prazer atender você!
+</p>
+
+<br>
+
+<a href="https://wa.me/5575998009767" class="btn2" target="_blank">
+<i class="fab fa-whatsapp"></i>
+Falar no WhatsApp
+</a>
+
+</section>
+
+<footer>
+
+<p>© 2026 Garcia07 Marcenaria - Todos os direitos reservados.</p>
+
+</footer>
+<a href="https://wa.me/5575998009767" class="whatsapp-fixo" target="_blank">
+
+<i class="fab fa-whatsapp"></i>
+
+</a><div id="lightbox" class="lightbox">
+
+<span class="fechar">&times;</span>
+
+<img id="imagem-grande">
+
+</div>
+
+<script>
+
+const imagens=document.querySelectorAll(".grade img");
+const lightbox=document.getElementById("lightbox");
+const imagemGrande=document.getElementById("imagem-grande");
+const fechar=document.querySelector(".fechar");
+
+imagens.forEach(img=>{
+img.onclick=()=>{
+lightbox.style.display="flex";
+imagemGrande.src=img.src;
+}
+});
+
+fechar.onclick=()=>{
+lightbox.style.display="none";
+}
+
+lightbox.onclick=(e)=>{
+if(e.target===lightbox){
+lightbox.style.display="none";
+}
+}
+
+</script>
+<script>
+
+const elementos=document.querySelectorAll(".animar");
+
+function revelar(){
+
+elementos.forEach(el=>{
+
+const topo=el.getBoundingClientRect().top;
+
+if(topo<window.innerHeight-100){
+
+el.classList.add("mostrar");
+
+}
+
+});
+
+}
+
+window.addEventListener("scroll",revelar);
+
+revelar();
+
+</script>
+</body>
+</html>
